@@ -64,7 +64,7 @@ defmodule DiscordEx.Client do
   end
 
   # Required Functions and Default Callbacks ( you shouldn't need to touch these to use client)
-  def init(state) do
+  def init(state, _) do
     # State sequence management process and set it's state
     {:ok, agent_seq_num} = Agent.start_link fn -> 0 end
 
