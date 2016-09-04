@@ -72,7 +72,7 @@ defmodule DiscordEx.Client do
       |> Map.put(:client_pid, self()) # Pass the client state to use it
       |> Map.put(:agent_seq_num, agent_seq_num) # Pass agent sequence num
 
-    {:once, new_state}
+    {:ok, new_state}
   end
 
   def onconnect(_WSReq, state) do
